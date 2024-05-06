@@ -8,6 +8,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/Styledbuttons/StyledButton"
 
 
+
 const Hero = () => {
   
   const StyledHero = styled("div")(({theme}) => ({
@@ -15,6 +16,12 @@ const Hero = () => {
     height: "100vh",
     display:"flex",
     alignItems:"center",
+    [theme.breakpoints.up('xs')]: {  // <= mobile
+      paddingTop:"100px",
+    },
+    [theme.breakpoints.up('md')]: {  // >= mobile
+      paddingTop:"0",
+    }
   }))
 
   const StyledImg = styled("img")(({theme}) => ({
